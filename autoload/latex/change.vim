@@ -109,6 +109,7 @@ function! latex#change#env_prompt() " {{{1
     return
   else
     call latex#change#env(new_env)
+    silent! call repeat#set("cse" . new_env . '')
   endif
 endfunction
 
